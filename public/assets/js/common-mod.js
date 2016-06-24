@@ -255,15 +255,17 @@ function backPano2() {
     hidePanoEle(['circle1']);
     showPanoEle(['circle2']);
     $j('.page1Img6').fadeOut(500);
-    $j('.page1Img7').hide();
+    $j('.page1Img7').fadeOut(500);
     $j('.page1Img8').hide();
     showPanoLayerEle(['compass1']);
+	//$('.page1Img8').fadeOut(500);
     $j('#pano').fadeIn(500);
     $j('.logo').fadeOut(500);
     $j('.musicBtn').fadeOut(500);
 }
 
 function getHole() {
+	//$('.page1Img8').fadeOut(500);
     $j('#pano').fadeOut(500);
     $j('.logo').fadeIn(500);
     $j('.musicBtn').fadeIn(500);

@@ -103,6 +103,8 @@
                         embedpano({swf: "{{asset('assets/krpano.swf')}}", xml: "{{asset('assets/tour.xml')}}", target: "pano", html5: "prefer", initvars: {design: "flat"}, passQueryParameters: !0});
                     </script>
                 </div>
+                
+                <!--<img src="{{asset('assets/images/page1Img8.png')}}" class="abs page1Img8" style="display:none;">-->
 
                 <div class="page1Img3 bgImg"></div>
                 <div class="page1Img0 bgImg"></div>

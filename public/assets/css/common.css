@@ -113,6 +113,8 @@ select,input,textarea{font-family:inherit; outline:none;}
 }
 .page1Img5b{ background:url(../images/page1Img5b.png) 0 0 no-repeat;}
 
+.page1Img8{ left:15px; top:370px;}
+
 .page1Img6{ background:url(../images/page1Img6.png) 0 0 no-repeat;}
 .page1Img7{ background:url(../images/page1Img7.png) 0 0 no-repeat;}
 /*.page1Img7{ left:500px; top:670px;
@@ -228,6 +230,13 @@ select,input,textarea{font-family:inherit; outline:none;}
 .p8b{ left:319px; top:598px;}
 .game3Img5{ left:165px; top:775px;}
 .game3Img6{ background:url(../images/game3Img6.png) 0 0 no-repeat; z-index:10;}
+.game3Img6Act{ -webkit-animation:game3Img6Act 2s 1s linear both; -webkit-transform-origin:50% 65%;}
+@-webkit-keyframes game3Img6Act{
+0%{ -webkit-transform:scale(1); opacity:0;}
+40%{ -webkit-transform:scale(1); opacity:1;}
+60%{ -webkit-transform:scale(1); opacity:1;}
+100%{ -webkit-transform:scale(4); opacity:1;}
+}
 
 .game4Img1{ background:url(../images/game4Img1.png) 0 0 no-repeat;}
 .game4Img2{ left:212px; top:620px;}

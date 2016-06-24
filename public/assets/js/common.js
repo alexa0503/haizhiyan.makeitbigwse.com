@@ -327,10 +327,10 @@ function game3Start() {
 function checkDrag() {
     if (($('.p1b img').attr('src').indexOf('1') > -1) && ($('.p2b img').attr('src').indexOf('2') > -1) && ($('.p3b img').attr('src').indexOf('3') > -1) && ($('.p4b img').attr('src').indexOf('4') > -1) && ($('.p5b img').attr('src').indexOf('5') > -1) && ($('.p6b img').attr('src').indexOf('6') > -1) && ($('.p7b img').attr('src').indexOf('7') > -1) && ($('.p8b img').attr('src').indexOf('8') > -1)) {
         canCheck = false;
-        $('.game3Img6').delay(1000).fadeIn(1000);
+        $('.game3Img6').addClass('game3Img6Act').show();
         setTimeout(function() {
             checkOk();
-        }, 3000);
+        }, 3100);
     }
 }
 
