@@ -5,7 +5,7 @@ body{ background:#000;}
 </style>
 @endsection
 @section('content')
-
+<audio style="display:none; height:0;" src="{{asset('assets/images/bgm2.mp3')}}" autoplay loop id="bgm"></audio>
 <div class="pageOuter">
 
     <div class="pageGame1 page">
@@ -213,7 +213,7 @@ body{ background:#000;}
 </div>
 
 <img src="{{asset('assets/images/logo.png')}}" class="abs logo">
-<a href="javascript:void(0);" class="abs musicBtn"><img src="{{asset('assets/images/musicBtn.png')}}"></a>
+<a href="javascript:void(0);" class="abs musicBtn" onClick="controlBgm();"><img src="{{asset('assets/images/musicBtn.png')}}"></a>
 
 <div class="abs colddownTime" style="display:none;">03:00</div>
 
@@ -228,6 +228,18 @@ body{ background:#000;}
 <script src="{{asset('assets/js/shake.js')}}"></script>
 <script src="{{asset('assets/js/common.js')}}"></script>
 <script>
+var bgmOn=true;
+function controlBgm(){
+	var bgm=document.getElementById('bgm');
+	if(bgmOn){
+		bgm.pause();
+		bgmOn=false;
+		}
+		else{
+			bgm.play();
+			bgmOn=true;
+			}
+	}
 $(document).ready(function(){
     $.ajaxSetup({
         headers: {

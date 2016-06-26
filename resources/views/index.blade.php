@@ -15,6 +15,7 @@
 <script src="{{asset('assets/js/common-mod.js')}}"></script>
 @endsection
 @section('content')
+<audio style="display:none; height:0;" src="{{asset('assets/images/bgm1.mp3')}}" autoplay loop id="bgm"></audio>
 <div class="pageOuter">
 	<div class="page0 page">
     	<div class="h832">
@@ -132,13 +133,26 @@
 </div>
 
 <img src="{{asset('assets/images/logo.png')}}" class="abs logo">
-<a href="javascript:void(0);" class="abs musicBtn"><img src="{{asset('assets/images/musicBtn.png')}}"></a>
+<a href="javascript:void(0);" class="abs musicBtn" onClick="controlBgm();"><img src="{{asset('assets/images/musicBtn.png')}}"></a>
 
 <img src="{{asset('assets/images/shareBg.png')}}" class="shareBg" style="display:none;" onClick="closeShare();">
 @endsection
 @section('scripts')
 <script src="{{asset('assets/js/jquery-1.9.1.min.js')}}"></script>
 <script>
+var bgmOn=true;
+function controlBgm(){
+	var bgm=document.getElementById('bgm');
+	if(bgmOn){
+		bgm.pause();
+		bgmOn=false;
+		}
+		else{
+			bgm.play();
+			bgmOn=true;
+			}
+	}
+
 $j(document).ready(function(){
     loadingImg();
 });
