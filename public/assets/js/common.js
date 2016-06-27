@@ -203,6 +203,12 @@ function loadingGame() {
 function goGame1() {
     $('.page0').fadeOut(500);
     //$('.pageGame1').fadeIn(500);
+	
+	if(bgmOn){
+		var bgm=document.getElementById('bgm');
+		bgm.play();
+		}
+	
     setTimeout(function() {
         $('.pageGame11').fadeOut(1000);
         $('.game1Img1').fadeIn(1000);
@@ -224,6 +230,11 @@ function getShake() {
 }
 
 function shakeEventDidOccur() {
+	if(bgmOn){
+		var bgm=document.getElementById('bgm');
+		bgm.play();
+		}
+	
     $('.game1Img2').hide();
     $('.game1Img1').fadeOut(500);
 

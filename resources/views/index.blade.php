@@ -133,7 +133,7 @@
 </div>
 
 <img src="{{asset('assets/images/logo.png')}}" class="abs logo">
-<a href="javascript:void(0);" class="abs musicBtn" onClick="controlBgm();"><img src="{{asset('assets/images/musicBtn.png')}}"></a>
+<a href="javascript:void(0);" class="abs musicBtn" onClick="controlBgm();"><img src="{{asset('assets/images/bgmOn.gif')}}" id="bgmOn"><img src="{{asset('assets/images/bgmOff.png')}}" id="bgmOff" style="display:none;"></a>
 
 <img src="{{asset('assets/images/shareBg.png')}}" class="shareBg" style="display:none;" onClick="closeShare();">
 @endsection
@@ -146,10 +146,14 @@ function controlBgm(){
 	if(bgmOn){
 		bgm.pause();
 		bgmOn=false;
+		$('#bgmOn').hide();
+		$('#bgmOff').show();
 		}
 		else{
 			bgm.play();
 			bgmOn=true;
+			$('#bgmOff').hide();
+			$('#bgmOn').show();
 			}
 	}
 

@@ -120,6 +120,10 @@ function goPage1() {
 }
 
 function indexStartGame() {
+	if(bgmOn){
+		var bgm=document.getElementById('bgm');
+		bgm.play();
+		}
     $j('.indexBtn1,.indexBtn2,.indexBtn3').hide();
     $j('.page0Img1').removeClass('page0Img1Act').fadeOut(500);
     $j('.page0Img2').removeClass('page0Img2Act').fadeOut(500);

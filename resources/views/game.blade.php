@@ -213,7 +213,7 @@ body{ background:#000;}
 </div>
 
 <img src="{{asset('assets/images/logo.png')}}" class="abs logo">
-<a href="javascript:void(0);" class="abs musicBtn" onClick="controlBgm();"><img src="{{asset('assets/images/musicBtn.png')}}"></a>
+<a href="javascript:void(0);" class="abs musicBtn" onClick="controlBgm();"><img src="{{asset('assets/images/bgmOn.gif')}}" id="bgmOn"><img src="{{asset('assets/images/bgmOff.png')}}" id="bgmOff" style="display:none;"></a>
 
 <div class="abs colddownTime" style="display:none;">03:00</div>
 
@@ -234,10 +234,14 @@ function controlBgm(){
 	if(bgmOn){
 		bgm.pause();
 		bgmOn=false;
+		$('#bgmOn').hide();
+		$('#bgmOff').show();
 		}
 		else{
 			bgm.play();
 			bgmOn=true;
+			$('#bgmOff').hide();
+			$('#bgmOn').show();
 			}
 	}
 $(document).ready(function(){
