@@ -56,7 +56,10 @@ class Lottery
         }
 
         //获取时间配置,当前为分配时间则不中奖,发默认奖
-        $config = \App\LotteryConfig::where('start_time','<=',$time)->where('shut_time','>',$time)->sharedLock()->first();
+        $config = \App\LotteryConfig::where('start_time','<=',$time)
+            ->where('shut_time','>',$time)
+            ->sharedLock()
+            ->first();
         if( $config == null ){
             return;
         }
@@ -71,7 +74,9 @@ class Lottery
 
         $seed = rand(1, 10000);
         //奖项分布情况,计算出中几等奖
-        $prize_model = \App\Prize::where('seed_min', '<=', $seed)->where('seed_max', '>=', $seed)->sharedLock();
+        $prize_model = \App\Prize::where('seed_min', '<=', $seed)
+            ->where('seed_max', '>=', $seed)
+            ->sharedLock();
         //无配置情况
         if( $prize_model->count() == 0 ){
             return;
@@ -80,10 +85,15 @@ class Lottery
         $prize = $prize_model->first();
 
         //当日奖项设置
-        $prize_config_model = \App\PrizeConfig::where('lottery_date', $date)->where('prize_id', $prize->id)->sharedLock();
+        $prize_config_model = \App\PrizeConfig::where('lottery_date', $date)
+            ->where('prize_id', $prize->id)
+            ->sharedLock();
         if( $prize_config_model->count() == 0 ){
             //如果此奖品奖池为空则分配最低等奖奖池
-            $prize_config_model = \App\PrizeConfig::where('lottery_date', $date)->where('prize_num','>', \DB::raw('win_num'))->orderby('prize_id','desc')->sharedLock();
+            $prize_config_model = \App\PrizeConfig::where('lottery_date', $date)
+                ->where('prize_num','>', \DB::raw('win_num'))
+                ->orderby('prize_id','desc')
+                ->sharedLock();
             if( $prize_config_model->count() == 0){
                 return;
             }
@@ -125,7 +135,9 @@ class Lottery
         $lottery->created_ip = \Request::getClientIp();
         //记录中奖用户
         if( $prize_id != 0){
-            $prize_code_model = \App\PrizeCode::where('is_active', 0)->where('prize_id', $prize_id);
+            $prize_code_model = \App\PrizeCode::where('is_active', 0)
+                ->where('prize_id', $prize_id)
+                ->sharedLock();
             if ($prize_code_model->count() > 0) {
                 $prize_code = $prize_code_model->first();
                 $prize_code->is_active = 1;
