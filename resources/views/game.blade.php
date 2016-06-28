@@ -220,7 +220,6 @@ body{ background:#000;}
 <img src="{{asset('assets/images/shareBg.png')}}" class="shareBg" style="display:none;" onClick="closeShare();">
 @endsection
 @section('scripts')
-<script src="{{asset('assets/js/jquery-1.9.1.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery-ui.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.ui.touch-punch.min.js')}}"></script>
 <script src="{{asset('assets/js/jquery.imgpreload.js')}}"></script>
