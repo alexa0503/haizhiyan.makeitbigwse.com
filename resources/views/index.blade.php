@@ -104,7 +104,7 @@
                         embedpano({swf: "{{asset('assets/krpano.swf')}}", xml: "{{asset('assets/tour.xml')}}", target: "pano", html5: "prefer", initvars: {design: "flat"}, passQueryParameters: !0});
                     </script>
                 </div>
-                
+
                 <!--<img src="{{asset('assets/images/page1Img8.png')}}" class="abs page1Img8" style="display:none;">-->
 
                 <div class="page1Img3 bgImg"></div>
@@ -138,7 +138,6 @@
 <img src="{{asset('assets/images/shareBg.png')}}" class="shareBg" style="display:none;" onClick="closeShare();">
 @endsection
 @section('scripts')
-<script src="{{asset('assets/js/jquery-1.9.1.min.js')}}"></script>
 <script>
 var bgmOn=true;
 function controlBgm(){
