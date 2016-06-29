@@ -10,6 +10,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{env("PAGE_TITLE")}}</title>
     <link rel="stylesheet" href="{{asset('assets/css/common.css')}}">
+    @yield('style')
     <script>
         var wxData = {};
         var wxShareUrl = '{{url("wx/share")}}';
@@ -35,7 +36,15 @@
         }
     </script>
     <!--移动端版本兼容 end -->
-    @yield('style')
+    <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?bae9b3b6c16c3f6aa30af8778865940a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>
 </head>
 <body>
 @yield('content')
