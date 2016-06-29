@@ -135,9 +135,11 @@ function indexStartGame() {
         $j('.page0').delay(500).fadeOut(500);
 
         setTimeout(function() {
+			krpano = document.getElementById("krpanoSWFObject");
             $j('.page1').fadeIn(500);
             hidePanoLayerEle(['compass1']);
             $j('#pano').fadeIn(1000);
+			krpano.set('lookto(10,35,80,smooth(500,300,200))');
             $j('.page1Img0').fadeOut(1500);
             setTimeout(function() {
                 $j('.page0Img4').hide();
@@ -146,7 +148,7 @@ function indexStartGame() {
                 $j('.page1Img3').fadeOut(500);
             }, 3000);
         }, 1500);
-    }, 3500);
+    }, 5500);
 }
 
 function showRule() {
@@ -212,9 +214,14 @@ function goLuopan() {
     $j('.page1Img5b').hide();
     $j('.page1Img6').fadeIn(500);
     $j('.page1Img7').delay(2500).fadeIn(500);
+	setTimeout(function(){
+		hidePanoEle(['circle1']);
+		showPanoEle(['circle2']);
+		showPanoLayerEle(['compass1']);
+		},2000);
     setTimeout(function() {
         backPano2();
-    }, 5000);
+    },7000);
 }
 
 var krpano;
@@ -256,14 +263,13 @@ function showPanoLayerEle(e) {
 }
 
 function backPano2() {
-    hidePanoEle(['circle1']);
-    showPanoEle(['circle2']);
+	krpano = document.getElementById("krpanoSWFObject");
     $j('.page1Img6').fadeOut(500);
     $j('.page1Img7').fadeOut(500);
     $j('.page1Img8').hide();
-    showPanoLayerEle(['compass1']);
 	//$('.page1Img8').fadeOut(500);
     $j('#pano').fadeIn(500);
+	krpano.set('lookto(-90,35,80,smooth(500,300,200))');
     $j('.logo').fadeOut(500);
     $j('.musicBtn').fadeOut(500);
 }

@@ -15,6 +15,8 @@ function randomNumb(minNumb, maxNumb) {
 }
 
 var wHeight;
+var isFirstTouch=true;
+var isAndroid = navigator.userAgent.toLowerCase().indexOf('android') >= 0;
 $(document).ready(function() {
     wHeight = $(window).height();
     if (wHeight < 832) {
@@ -24,6 +26,16 @@ $(document).ready(function() {
     $('.page').height(wHeight);
 
     $('.h832').css('padding-top', (wHeight - 832) / 2 + 'px');
+	$('body').on('touchstart',function(){
+		if(isFirstTouch&&isAndroid&&bgmOn){
+			isFirstTouch=false;
+			var bgm=document.getElementById('bgm');
+			bgm.play();
+			}
+		});
+	$('.pageGame3').on('touchmove', function (e) {
+		e.preventDefault();
+		});
 });
 
 function loadingImg() {
@@ -303,33 +315,76 @@ function game2Act1() {
     });
 }
 
-var dragImg;
-var dragPb;
-var dropImg;
-var dropPb;
+var dragImg='';
+var dragPb='';
+var dropImg='';
+var dropPb='';
 var canCheck = true;
+var isDrag=false;
+var revertTime;
 
 function game3Start() {
     $(".pg").draggable({
-        drag: function(event, ui) {
-            if (canCheck) {
-                $('.game3Img5').fadeOut(500);
-                $(".pg").css('z-index', '0');
-                $(this).css('z-index', '5');
-                dragImg = $(this).attr('src');
-                dragPb = $(this).parents('.pb').attr('rel');
-            }
-        },
-        revert: true
+		start:function( event, ui ) {
+			if (canCheck&&!isDrag&&dropPb=='') {
+				isDrag=true;
+				$(".pg").addClass('isDraging');
+				$(this).removeClass('isDraging');
+				$('.game3Img5').fadeOut(500);
+				$(".pg").css('z-index', '0');
+				$(this).css('z-index', '5');
+				//$('.ui-draggable-dragging').css('z-index', '5');
+				dragImg = $(this).attr('src');
+				dragPb = $(this).parents('.pb').attr('rel');
+				$(".isDraging").draggable( "disable" );
+				}
+				else{
+					dragImg='';
+					dragPb='';
+					dropImg='';
+					dropPb='';
+					isDrag=false;
+					return false;
+					}
+			},
+		stop:function( event, ui ) {
+			$(".isDraging").draggable( "enable" );
+			$(".pg").removeClass('isDraging');
+			isDrag=false;
+			},
+        revert: true,
+		revertDuration: 100
     });
     $(".pb").droppable({
         drop: function(event, ui) {
-            if (canCheck) {
-                dropPb = $(this).attr('rel');
-                dropImg = $(this).find('img').attr('src');
-                $(this).find('img').attr('src', dragImg);
-                $('.' + dragPb + 'b').find('img').attr('src', dropImg);
-                checkDrag();
+            if (canCheck&&isDrag) {
+				dropPb = $(this).attr('rel');
+				dropImg = $(this).find('img').attr('src');
+				if(dropImg==dragImg){
+					dragImg='';
+					dragPb='';
+					dropImg='';
+					dropPb='';
+					isDrag=false;
+					return false;
+					}
+					else if(dropPb==dragPb){
+						dragImg='';
+						dragPb='';
+						dropImg='';
+						dropPb='';
+						isDrag=false;
+						return false;
+						}
+					else if(dropPb!=dragPb&&dropImg!=dragImg&&dropImg!=''&&dragImg!=''&isDrag){
+						$(this).find('img').attr('src', dragImg);
+						$('.' + dragPb + 'b').find('img').attr('src', dropImg);
+						dragImg='';
+						dragPb='';
+						dropImg='';
+						dropPb='';
+						checkDrag();
+						}
             }
         }
     });

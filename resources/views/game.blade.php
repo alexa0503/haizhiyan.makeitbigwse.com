@@ -254,4 +254,5 @@ $(document).ready(function(){
 	//testDarg();
 });
 </script>
+<!--<p style="position:fixed; bottom:10px; left:10px; color:#FFF; font-size:16px;" id="testP"></p>-->
 @endsection
