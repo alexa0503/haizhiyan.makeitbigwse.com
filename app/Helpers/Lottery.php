@@ -153,7 +153,7 @@ class Lottery
                 $prize_config = \App\PrizeConfig::find($this->prize_config_id);
             }
             */
-            $prize_config = \App\PrizeConfig::find($this->prize_config_id);
+            $prize_config = \App\PrizeConfig::sharedLock()->find($this->prize_config_id);
             if( null != $prize_config){
                 $prize_config->win_num += 1;
                 $prize_config->save();

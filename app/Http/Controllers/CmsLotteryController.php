@@ -136,7 +136,6 @@ class CmsLotteryController extends Controller
         $this->validate($request, [
             'lottery_date' => 'required|date',
             'prize_num' => 'required',
-            'type' => 'required',
             'prize' => 'required',
         ]);
         $prize_config = new \App\PrizeConfig();
