@@ -190,7 +190,7 @@ body{ background:#000;}
                     <div class="awardYes3 bgImg"></div>
                     <img src="{{asset('assets/images/qcYes.png')}}" class="bgImg" style="top:-22px;">
                     <div class="abs a3Numb">兑换码: <span id="prize_code_3"></span></div>
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:527px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward0" style="display:none;">
