@@ -176,14 +176,14 @@ body{ background:#000;}
             	<div class="getAward1" style="display:none;">
                     <div class="awardYes1 bgImg"></div>
                     <img src="{{asset('assets/images/qcYes.png')}}" class="bgImg" style="top:-35px;">
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:514px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward2" style="display:none;">
                     <div class="awardYes2 bgImg"></div>
                     <img src="{{asset('assets/images/qcYes.png')}}" class="bgImg" style="top:-22px;">
                     <div class="abs a2Numb">兑换码: <span id="prize_code_2"></span></div>
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:534px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward3" style="display:none;">
