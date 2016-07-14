@@ -69,7 +69,7 @@ Route::get('/cms/account', 'CmsController@account');
 Route::post('/cms/account', 'CmsController@accountPost');
 Route::get('/cms/wechat', 'CmsController@wechat');
 Route::get('/cms/user/logs', 'CmsController@userLogs');
-Route::get('/cms/wechat/export', 'CmsController@wechatExport');
+Route::get('/cms/export', 'CmsController@export');
 Route::get('/cms/photos', 'CmsController@photos');
 Route::get('/cms/photos/export', 'CmsController@photosExport');
 Route::get('/cms/sessions', 'CmsController@sessions');
