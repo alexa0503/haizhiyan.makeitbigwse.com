@@ -51,9 +51,9 @@
     <div class="pageAward1 page" style="display:none;">
     	<div class="h832">
         	<div class="innerDiv">
-				<div class="page0Award page0Award1 bgImg"></div>
-                <img src="{{asset('assets/images/page0AwardQc.png')}}" class="bgImg" style="top:-145px;">
-                <a href="javascript:void(0);" class="abs indexBtn6" onClick="showShareNote();" style="top:454px;"><img src="{{asset('assets/images/space.gif')}}" width="252" height="52"></a>
+				<!--<div class="page0Award page0Award1 bgImg"></div>-->
+                <img src="{{asset('assets/images/page0Award1.png')}}" class="bgImg">
+                <a href="javascript:void(0);" class="abs indexBtn6" onClick="showShareNote();" style="top:455px;"><img src="{{asset('assets/images/space.gif')}}" width="252" height="52"></a>
                 <a href="javascript:void(0);" class="abs indexBtn5" onClick="closeAward();" style="top:790px;"><img src="{{asset('assets/images/space.gif')}}" width="103" height="103"></a>
             </div>
         </div>
@@ -62,10 +62,11 @@
     <div class="pageAward2 page" style="display:none;">
     	<div class="h832">
         	<div class="innerDiv">
-				<div class="page0Award page0Award2 bgImg"></div>
-                <img src="{{asset('assets/images/page0AwardQc.png')}}" class="bgImg">
-                <div class="abs a3Numb" style="top:225px;">兑换码: <span id="prize_code_2"></span></div>
-                <a href="javascript:void(0);" class="abs indexBtn6b" onClick="showShareNote();" style="top:518px;"><img src="{{asset('assets/images/space.gif')}}" width="252" height="52"></a>
+				<!--<div class="page0Award page0Award2 bgImg"></div>-->
+                <img src="{{asset('assets/images/page0Award2.png')}}" class="bgImg">
+                <div class="abs a3Numb" style="top:225px;">中奖串码: <span id="prize_code_2"></span></div>
+                <a href="javascript:void(0);" onClick="showShareNote();" class="abs indexBtn6b" style="left:61px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+				<a href="http://h5test.dfjinmei.com:8050/exchange/hzy" class="abs indexBtn6b" style="left:329px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 <a href="javascript:void(0);" class="abs indexBtn5" onClick="closeAward();" style="top:790px;"><img src="{{asset('assets/images/space.gif')}}" width="103" height="103"></a>
             </div>
         </div>
@@ -74,10 +75,10 @@
     <div class="pageAward3 page" style="display:none;">
     	<div class="h832">
         	<div class="innerDiv">
-				<div class="page0Award page0Award3 bgImg"></div>
-                <img src="{{asset('assets/images/page0AwardQc.png')}}" class="bgImg">
+				<!--<div class="page0Award page0Award3 bgImg"></div>-->
+                <img src="{{asset('assets/images/page0Award3.png')}}" class="bgImg">
                 <div class="abs a3Numb" style="top:200px;">兑换码: <span id="prize_code_3"></span></div>
-                <a href="javascript:void(0);" class="abs indexBtn6b" onClick="showShareNote();" style="top:508px;"><img src="{{asset('assets/images/space.gif')}}" width="252" height="52"></a>
+                <a href="javascript:void(0);" class="abs indexBtn6b" onClick="showShareNote();" style="top:509px;"><img src="{{asset('assets/images/space.gif')}}" width="252" height="52"></a>
                 <a href="javascript:void(0);" class="abs indexBtn5" onClick="closeAward();" style="top:790px;"><img src="{{asset('assets/images/space.gif')}}" width="103" height="103"></a>
             </div>
         </div>

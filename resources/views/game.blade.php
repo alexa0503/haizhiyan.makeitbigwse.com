@@ -174,29 +174,30 @@ body{ background:#000;}
     	<div class="h832">
             <div class="innerDiv">
             	<div class="getAward1" style="display:none;">
-                    <div class="awardYes1 bgImg"></div>
-                    <img src="{{asset('assets/images/qcYes.png')}}" class="bgImg" style="top:-35px;">
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:514px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <!--<div class="awardYes1 bgImg"></div>-->
+                    <img src="{{asset('assets/images/awardYes1.png')}}" class="bgImg">
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:455px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward2" style="display:none;">
-                    <div class="awardYes2 bgImg"></div>
-                    <img src="{{asset('assets/images/qcYes.png')}}" class="bgImg" style="top:-22px;">
-                    <div class="abs a2Numb">兑换码: <span id="prize_code_2"></span></div>
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:534px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <!--<div class="awardYes2 bgImg"></div>-->
+                    <img src="{{asset('assets/images/awardYes2.png')}}" class="bgImg">
+                    <div class="abs a2Numb">中奖串码: <span id="prize_code_2"></span></div>
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="left:61px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="http://h5test.dfjinmei.com:8050/exchange/hzy" class="abs endBtn1" style="left:329px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward3" style="display:none;">
-                    <div class="awardYes3 bgImg"></div>
-                    <img src="{{asset('assets/images/qcYes.png')}}" class="bgImg" style="top:-22px;">
+                    <!--<div class="awardYes3 bgImg"></div>-->
+                    <img src="{{asset('assets/images/awardYes3.png')}}" class="bgImg">
                     <div class="abs a3Numb">兑换码: <span id="prize_code_3"></span></div>
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:527px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="top:509px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward0" style="display:none;">
                     <div class="awardNo bgImg"></div>
                     <img src="{{asset('assets/images/qcNo.png')}}" class="bgImg">
-                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn2"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn2" style="top:473px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
             </div>
         </div>
