@@ -184,7 +184,7 @@ body{ background:#000;}
                     <img src="{{asset('assets/images/awardYes2.png')}}" class="bgImg">
                     <div class="abs a2Numb">中奖串码: <span id="prize_code_2"></span></div>
                     <a href="javascript:void(0);" onClick="showShareNote();" class="abs endBtn1" style="left:61px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
-                    <a href="http://h5test.dfjinmei.com:8050/exchange/hzy" class="abs endBtn1" style="left:329px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
+                    <a href="http://wap.dfjinmei.com:8050/exchange/hzy" class="abs endBtn1" style="left:329px; top:520px;"><img src="{{asset('assets/images/space.gif')}}" width="250" height="51"></a>
                 </div>
 
                 <div class="getAward3" style="display:none;">
